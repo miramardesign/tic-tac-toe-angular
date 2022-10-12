@@ -1,0 +1,34 @@
+<p>tic-tac-toe works!</p>
+
+
+<div id="statusArea" className="status">Next player:
+
+    <span *ngIf="turnX">X</span>
+    <span *ngIf="!turnX">O</span>
+  
+  </div>
+  
+  {{ticTacToeData|json}}
+  
+  winType:::: {{winType}}
+  
+  <div id="winnerArea" className="winner">Winner:
+    <span *ngIf="!hasWinner">None</span>
+    <span *ngIf="hasWinner">
+  
+      <span *ngIf="!turnX">X</span>
+      <span *ngIf="turnX">O</span>
+    </span>
+  
+  </div>
+  
+  <button (click)="reset()">Reset</button>
+  <section class="wrap-marks"
+  [ngClass]="'win-' + hasWinner + ' win-type-' + winType"
+  >
+    <div class="row" *ngFor="let row of ticTacToeData; let iRow = index">
+      <button *ngFor="let sqValue of row; let iCol = index" class="square" [ngClass]="'mark' + sqValue "
+        (click)="goTurn(iRow, iCol, turnX )">
+      </button>
+    </div>
+  </section>

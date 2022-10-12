@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">tic-tac-toe</string>
+    <string name="title_activity_main">tic-tac-toe</string>
+    <string name="package_name">tic.tac.toe</string>
+    <string name="custom_url_scheme">tic.tac.toe</string>
+</resources>
